@@ -1,5 +1,8 @@
 import string
 import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('punkt_tab')
 
 #################################################################
 #                                                               #
@@ -45,7 +48,7 @@ def stopword_removal(tokens):
 
 def stemming(tokens):
     stemmer = nltk.PorterStemmer()
-    return [stemmer(token) for token in tokens]
+    return [stemmer.stem(token) for token in tokens]
 
 def text_preprocessing(text):
     text = lowercasing(text)
