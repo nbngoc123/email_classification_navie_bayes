@@ -1,0 +1,3 @@
+VAL_SIZE = 0.2
+TEST_SIZE = 0.125
+SEED = 0
