@@ -7,7 +7,7 @@ class DataLoader:
         self.path = path
 
     def load_data(self):
-        df = pd.read_csv(self.path)[:10]
+        df = pd.read_csv(self.path)
         print('load data from csv file successfully!')
 
         messages = df['Message'].values.tolist()
