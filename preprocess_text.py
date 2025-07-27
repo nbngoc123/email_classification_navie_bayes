@@ -43,8 +43,8 @@ def tokenization(text):
     return nltk.word_tokenize(text)
 
 def stopword_removal(tokens):
-    stop_words = nltk.corpus.stopwords.words('english')
-    return [token for token in stop_words if token not in tokens]
+    stop_words = set(nltk.corpus.stopwords.words('english'))
+    return [token for token in tokens if token not in stop_words]
 
 def stemming(tokens):
     stemmer = nltk.PorterStemmer()
